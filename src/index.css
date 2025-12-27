@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;900&display=swap');
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  scrollbar-width: none;
+}
+
+@theme {
+  --color-primary: #94a3b8;
+  /* Refined Steel Grey */
+  --color-primary-dark: #475569;
+  /* Darker Slate/Steel */
+  --color-accent: #cbd5e1;
+  /* Light Steel Grey */
+  --color-accent-light: #e2e8f0;
+
+  --color-background: #000000;
+  --color-surface: #0a0a0a;
+  --color-surface-hover: #121212;
+
+  --color-text-main: #ffffff;
+  --color-text-muted: #94a3b8;
+
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  @keyframes pulse-glow {
+
+    0%,
+    100% {
+      opacity: 0.5;
+      filter: blur(8px);
+    }
+
+    50% {
+      opacity: 1;
+      filter: blur(12px);
+    }
+  }
+
+  @keyframes scan {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      transform: translateY(300%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+
+    100% {
+      background-position: 200% 0;
+    }
+  }
+}
+
+@layer utilities {
+  .animate-glow-pulse {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .btn-premium {
+    @apply relative px-10 py-4 bg-white/5 border border-white/10 rounded-full transition-all duration-500 hover:bg-primary hover:text-black hover:border-primary hover:scale-105 active:scale-95 font-black text-[0.7rem] tracking-[0.2em] uppercase text-white;
+  }
+
+  .btn-outline {
+    @apply relative px-10 py-4 border border-white/20 rounded-full transition-all duration-500 hover:border-primary hover:text-primary hover:bg-primary/5 active:scale-95 font-black text-[0.7rem] tracking-[0.2em] uppercase text-white;
+  }
+
+  .text-shimmer {
+    background: linear-gradient(90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0) 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-main);
+  background-color: var(--color-background);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: #fff;
+}
