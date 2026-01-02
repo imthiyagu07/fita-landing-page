@@ -12,31 +12,31 @@ const ApproachStep = ({ number, title, desc, delay, isEven }) => (
         {/* Step Marker */}
         <div className="flex items-center gap-4 mb-8">
             <div className="relative">
-                <div className="w-12 h-12 bg-neutral-900 border border-white/10 rounded-xl flex items-center justify-center text-primary font-black text-xl group-hover:bg-primary group-hover:text-black transition-all duration-500 z-10 relative">
+                <div className="w-12 h-12 bg-surface border border-primary/10 rounded-xl flex items-center justify-center text-primary font-black text-xl group-hover:bg-primary group-hover:text-white transition-all duration-500 z-10 relative">
                     {number}
                 </div>
                 {/* Pulse ring */}
                 <div className="absolute inset-0 rounded-xl bg-primary/20 animate-ping group-hover:animate-none opacity-0 group-hover:opacity-0 transition-opacity"></div>
             </div>
-            <div className="h-px bg-white/10 grow"></div>
-            <span className="font-mono text-[0.6rem] text-white/20 tracking-[0.3em] font-bold">PHASE_{number}</span>
+            <div className="h-px bg-primary/10 grow"></div>
+            <span className="font-mono text-[0.6rem] text-text-muted/40 tracking-[0.3em] font-bold">PHASE_{number}</span>
         </div>
 
         {/* Content Card */}
-        <div className="p-8 sm:p-10 bg-white/2 border border-white/5 rounded-[2.5rem] group-hover:bg-white/5 group-hover:border-primary/20 transition-all duration-700 backdrop-blur-sm relative overflow-hidden">
+        <div className="p-8 sm:p-10 bg-surface border border-primary/5 rounded-[2.5rem] group-hover:bg-white group-hover:border-primary/20 transition-all duration-700 shadow-sm hover:shadow-xl relative overflow-hidden">
             {/* Corner Accent */}
             <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-[5rem] translate-x-12 -translate-y-12 group-hover:translate-x-8 group-hover:-translate-y-8 transition-transform duration-700"></div>
 
-            <h3 className="font-heading font-black text-xl sm:text-2xl text-white mb-5 tracking-tight group-hover:text-primary transition-colors duration-500">
+            <h3 className="font-heading font-black text-xl sm:text-2xl text-text-main mb-5 tracking-tight group-hover:text-primary transition-colors duration-500">
                 {title}
             </h3>
-            <p className="font-body text-sm sm:text-base text-white/30 leading-relaxed group-hover:text-white/60 transition-colors duration-500 font-light">
+            <p className="font-body text-sm sm:text-base text-text-muted leading-relaxed group-hover:text-text-main transition-colors duration-500 font-light">
                 {desc}
             </p>
 
             {/* Technical Detail readout */}
-            <div className="mt-8 pt-8 border-t border-white/5 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                <span className="text-[0.55rem] font-mono text-white/20 uppercase tracking-widest">Protocol: Verified</span>
+            <div className="mt-8 pt-8 border-t border-primary/5 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                <span className="text-[0.55rem] font-mono text-text-muted/40 uppercase tracking-widest">Protocol: Verified</span>
                 <div className="flex gap-1">
                     <div className="w-1 h-1 rounded-full bg-primary/40"></div>
                     <div className="w-1 h-1 rounded-full bg-primary/40"></div>
@@ -56,11 +56,11 @@ const HowWeWork = () => {
     ];
 
     return (
-        <section id="how-we-work" className="py-32 sm:py-48 bg-black relative overflow-hidden">
+        <section id="how-we-work" className="py-32 sm:py-48 bg-background relative overflow-hidden">
             {/* Background Lines */}
             <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-20">
-                <div className="absolute top-1/2 left-0 w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent"></div>
-                <div className="absolute top-[30%] left-[-10%] w-[120%] h-[400px] border border-white/5 rounded-full blur-3xl"></div>
+                <div className="absolute top-1/2 left-0 w-full h-px bg-linear-to-r from-transparent via-primary/10 to-transparent"></div>
+                <div className="absolute top-[30%] left-[-10%] w-[120%] h-[400px] border border-primary/5 rounded-full blur-3xl"></div>
             </div>
 
             <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 relative z-10">
@@ -76,9 +76,9 @@ const HowWeWork = () => {
                             <div className="w-12 h-px bg-primary/40"></div>
                             <span className="text-primary text-[0.65rem] font-black tracking-[0.6em] uppercase">The Pipeline</span>
                         </div>
-                        <h2 className="font-heading font-black text-4xl sm:text-6xl text-white tracking-tighter uppercase leading-[0.85]">
+                        <h2 className="font-heading font-black text-4xl sm:text-6xl text-text-main tracking-tighter uppercase leading-[0.85]">
                             THE <br />
-                            <span className="text-white/20">METHODOLOGY.</span>
+                            <span className="text-primary/10">METHODOLOGY.</span>
                         </h2>
                     </motion.div>
 
@@ -87,7 +87,7 @@ const HowWeWork = () => {
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1, delay: 0.3 }}
-                        className="font-body text-white/30 text-base max-w-sm normal-case pb-2 leading-relaxed font-light"
+                        className="font-body text-text-muted text-base max-w-sm normal-case pb-2 leading-relaxed font-light"
                     >
                         A systematic integration of engineering precision and strategic oversight across the project lifecycle.
                     </motion.p>

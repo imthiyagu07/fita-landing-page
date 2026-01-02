@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 
 function App() {
     return (
-        <div className="bg-black min-h-screen selection:bg-primary selection:text-black">
+        <div className="bg-background min-h-screen selection:bg-primary selection:text-white">
             <Header />
 
             <main>

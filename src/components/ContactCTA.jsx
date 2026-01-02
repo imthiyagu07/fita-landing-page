@@ -10,11 +10,11 @@ const FormField = ({ label, children, delay }) => (
         className="space-y-2 group"
     >
         <div className="flex justify-between items-center px-1">
-            <label className="text-[0.6rem] font-bold text-white/20 uppercase tracking-[0.2em] group-focus-within:text-primary/60 transition-colors">
+            <label className="text-[0.6rem] font-bold text-text-muted/40 uppercase tracking-[0.2em] group-focus-within:text-primary/60 transition-colors">
                 {label}
             </label>
-            <div className="h-px bg-white/5 grow mx-4"></div>
-            <span className="text-[0.5rem] font-mono text-white/10 group-focus-within:text-primary/20 transition-colors">REQ_FL_0{delay * 10}</span>
+            <div className="h-px bg-primary/5 grow mx-4"></div>
+            <span className="text-[0.5rem] font-mono text-primary/10 group-focus-within:text-primary/20 transition-colors">REQ_FL_0{delay * 10}</span>
         </div>
         {children}
     </motion.div>
@@ -28,9 +28,9 @@ const ContactCTA = () => {
     };
 
     return (
-        <section id="contact" className="py-32 sm:py-48 bg-black relative overflow-hidden">
+        <section id="contact" className="py-32 sm:py-48 bg-background relative overflow-hidden">
             {/* Background Decorative Element */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full border-x border-white/5 pointer-events-none"></div>
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full border-x border-primary/5 pointer-events-none"></div>
             <div className="absolute top-1/4 -right-20 w-80 h-80 bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
 
             <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 relative z-10">
@@ -49,12 +49,12 @@ const ContactCTA = () => {
                                 <span className="text-primary text-[0.65rem] font-black tracking-[0.6em] uppercase text-shimmer">Inquiry Portal</span>
                             </div>
 
-                            <h2 className="font-heading font-black text-5xl sm:text-6xl lg:text-7xl text-white mb-10 tracking-tighter uppercase leading-[0.85]">
+                            <h2 className="font-heading font-black text-5xl sm:text-6xl lg:text-7xl text-text-main mb-10 tracking-tighter uppercase leading-[0.85]">
                                 CONNECT <br />
-                                <span className="text-white/20">TO EXPERTISE.</span>
+                                <span className="text-primary/10">TO EXPERTISE.</span>
                             </h2>
 
-                            <p className="font-body text-white/40 text-lg mb-12 max-w-md font-light leading-relaxed">
+                            <p className="font-body text-text-muted text-lg mb-12 max-w-md font-light leading-relaxed">
                                 Deploy our engineering capabilities for your next infrastructure challenge. Our technical team is standing by for strategic integration.
                             </p>
 
@@ -63,9 +63,9 @@ const ContactCTA = () => {
                                     { label: "HQ_LOCATION", value: "Jurong East, Singapore" },
                                     { label: "COMM_CHANNEL", value: "contact@fitaglobal.com" },
                                 ].map((item, idx) => (
-                                    <div key={idx} className="flex flex-col gap-1 border-l-2 border-white/5 pl-6 hover:border-primary/40 transition-colors duration-500 py-1">
-                                        <span className="text-[0.6rem] font-mono text-white/20 tracking-widest">{item.label}</span>
-                                        <span className="text-white/80 font-medium tracking-wide">{item.value}</span>
+                                    <div key={idx} className="flex flex-col gap-1 border-l-2 border-primary/5 pl-6 hover:border-primary/40 transition-colors duration-500 py-1">
+                                        <span className="text-[0.6rem] font-mono text-text-muted tracking-widest">{item.label}</span>
+                                        <span className="text-text-main font-medium tracking-wide">{item.value}</span>
                                     </div>
                                 ))}
                             </div>
@@ -80,16 +80,16 @@ const ContactCTA = () => {
                         transition={{ duration: 1, delay: 0.2 }}
                         className="lg:col-span-7"
                     >
-                        <div className="relative p-1 px-1 sm:p-1.5 sm:px-1.5 bg-linear-to-br from-white/10 to-transparent rounded-[3rem] overflow-hidden group">
-                            <div className="relative bg-neutral-950 p-10 sm:p-16 rounded-[2.9rem] flex flex-col gap-10">
+                        <div className="relative p-1 px-1 sm:p-1.5 sm:px-1.5 bg-linear-to-br from-primary/10 to-transparent rounded-[3rem] overflow-hidden group">
+                            <div className="relative bg-surface p-10 sm:p-16 rounded-[2.9rem] flex flex-col gap-10">
 
                                 {/* Console Header */}
-                                <div className="flex justify-between items-center border-b border-white/5 pb-8">
+                                <div className="flex justify-between items-center border-b border-primary/10 pb-8">
                                     <div className="flex items-center gap-3">
                                         <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
-                                        <span className="text-[0.7rem] font-black text-white/60 tracking-[0.2em] uppercase">Security Transmission</span>
+                                        <span className="text-[0.7rem] font-black text-text-main/60 tracking-[0.2em] uppercase">Security Transmission</span>
                                     </div>
-                                    <span className="text-[0.6rem] font-mono text-white/10 hidden sm:block">ENCRYPTION: AES-256</span>
+                                    <span className="text-[0.6rem] font-mono text-text-muted hidden sm:block">ENCRYPTION: AES-256</span>
                                 </div>
 
                                 <form className="space-y-8">
@@ -97,14 +97,14 @@ const ContactCTA = () => {
                                         <FormField label="Full Name" delay={0.1}>
                                             <input
                                                 type="text" name="name" onChange={handleChange}
-                                                className="w-full bg-white/2 border border-white/5 rounded-2xl px-6 py-4 text-white placeholder:text-white/10 focus:outline-none focus:border-primary/40 focus:bg-white/5 transition-all text-sm"
+                                                className="w-full bg-primary/5 border border-primary/5 rounded-2xl px-6 py-4 text-text-main placeholder:text-primary/20 focus:outline-none focus:border-primary/40 focus:bg-primary/5 transition-all text-sm"
                                                 placeholder="Spec_Name"
                                             />
                                         </FormField>
                                         <FormField label="Email Registry" delay={0.2}>
                                             <input
                                                 type="email" name="email" onChange={handleChange}
-                                                className="w-full bg-white/2 border border-white/5 rounded-2xl px-6 py-4 text-white placeholder:text-white/10 focus:outline-none focus:border-primary/40 focus:bg-white/5 transition-all text-sm"
+                                                className="w-full bg-primary/5 border border-primary/5 rounded-2xl px-6 py-4 text-text-main placeholder:text-primary/20 focus:outline-none focus:border-primary/40 focus:bg-primary/5 transition-all text-sm"
                                                 placeholder="auth@domain.com"
                                             />
                                         </FormField>
@@ -114,14 +114,14 @@ const ContactCTA = () => {
                                         <div className="relative">
                                             <select
                                                 name="subject" onChange={handleChange}
-                                                className="w-full bg-white/2 border border-white/5 rounded-2xl px-6 py-4 text-white appearance-none focus:outline-none focus:border-primary/40 focus:bg-white/5 transition-all text-sm cursor-pointer"
+                                                className="w-full bg-primary/5 border border-primary/5 rounded-2xl px-6 py-4 text-text-main appearance-none focus:outline-none focus:border-primary/40 focus:bg-primary/5 transition-all text-sm cursor-pointer"
                                             >
-                                                <option className="bg-neutral-900">Engineering & Design</option>
-                                                <option className="bg-neutral-900">Construction & Infrastructure</option>
-                                                <option className="bg-neutral-900">Training & Development</option>
-                                                <option className="bg-neutral-900">Strategic Compliance</option>
+                                                <option className="bg-white">Engineering & Design</option>
+                                                <option className="bg-white">Construction & Infrastructure</option>
+                                                <option className="bg-white">Training & Development</option>
+                                                <option className="bg-white">Strategic Compliance</option>
                                             </select>
-                                            <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-white/20">
+                                            <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-primary/20">
                                                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
                                             </div>
                                         </div>
@@ -130,7 +130,7 @@ const ContactCTA = () => {
                                     <FormField label="Technical Directive" delay={0.4}>
                                         <textarea
                                             name="message" rows="4" onChange={handleChange}
-                                            className="w-full bg-white/2 border border-white/5 rounded-2xl px-6 py-4 text-white placeholder:text-white/10 focus:outline-none focus:border-primary/40 focus:bg-white/5 transition-all text-sm resize-none"
+                                            className="w-full bg-primary/5 border border-primary/5 rounded-2xl px-6 py-4 text-text-main placeholder:text-primary/20 focus:outline-none focus:border-primary/40 focus:bg-primary/5 transition-all text-sm resize-none"
                                             placeholder="Transmission contents..."
                                         ></textarea>
                                     </FormField>

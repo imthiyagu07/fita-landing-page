@@ -10,8 +10,8 @@ const Careers = () => {
     ];
 
     return (
-        <section id="careers" className="py-32 sm:py-48 bg-black relative overflow-hidden border-t border-white/5">
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(148,163,184,0.05)_0%,transparent_50%)]"></div>
+        <section id="careers" className="py-32 sm:py-48 bg-background relative overflow-hidden border-t border-primary/5">
+            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(30,27,75,0.05)_0%,transparent_50%)]"></div>
 
             <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 xl:gap-32 items-center">
@@ -26,12 +26,12 @@ const Careers = () => {
                             <span className="text-primary text-[0.65rem] font-black tracking-[0.5em] uppercase">Human Capital</span>
                         </div>
 
-                        <h2 className="font-heading font-black text-4xl sm:text-5xl lg:text-7xl text-white mb-10 tracking-tight leading-[0.9] uppercase">
+                        <h2 className="font-heading font-black text-4xl sm:text-5xl lg:text-7xl text-text-main mb-10 tracking-tight leading-[0.9] uppercase">
                             BUILD YOUR <br />
-                            <span className="text-white/30">FUTURE HERE.</span>
+                            <span className="text-primary/10">FUTURE HERE.</span>
                         </h2>
 
-                        <p className="font-body text-xl text-white/50 mb-16 leading-relaxed max-w-xl font-light tracking-tight">
+                        <p className="font-body text-xl text-text-muted mb-16 leading-relaxed max-w-xl font-light tracking-tight">
                             We are always looking for passionate engineers, designers, and project managers to join our growing team. Shape the infrastructure of tomorrow with FITA Group.
                         </p>
 
@@ -46,8 +46,8 @@ const Careers = () => {
                                     className="flex items-center gap-6 group cursor-pointer"
                                     whileHover={{ x: 10 }}
                                 >
-                                    <div className="w-12 h-px bg-white/10 group-hover:bg-primary transition-all duration-700 group-hover:w-20"></div>
-                                    <span className="text-white/50 group-hover:text-white transition-colors duration-500 font-bold text-sm tracking-widest uppercase">{role}</span>
+                                    <div className="w-12 h-px bg-primary/10 group-hover:bg-primary transition-all duration-700 group-hover:w-20"></div>
+                                    <span className="text-text-muted group-hover:text-primary transition-colors duration-500 font-bold text-sm tracking-widest uppercase">{role}</span>
                                 </motion.div>
                             ))}
                         </div>
@@ -58,13 +58,13 @@ const Careers = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1, delay: 0.2 }}
-                        className="bg-white/2 border border-white/10 p-10 sm:p-20 rounded-[3rem] backdrop-blur-3xl relative overflow-hidden group shadow-2xl"
+                        className="bg-surface border border-primary/10 p-10 sm:p-20 rounded-[3rem] backdrop-blur-3xl relative overflow-hidden group shadow-sm hover:shadow-2xl transition-all duration-700"
                     >
                         {/* Decorative background glow */}
                         <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/10 rounded-full blur-[80px] group-hover:bg-primary/20 transition-colors duration-1000"></div>
 
-                        <h3 className="font-heading font-black text-3xl sm:text-4xl text-white mb-8 tracking-tighter">Open Applications</h3>
-                        <p className="font-body text-base text-white/40 mb-12 leading-relaxed">
+                        <h3 className="font-heading font-black text-3xl sm:text-4xl text-text-main mb-8 tracking-tighter">Open Applications</h3>
+                        <p className="font-body text-base text-text-muted mb-12 leading-relaxed">
                             Don't see a specific role but think you'd be a great fit? Submit your interest and portfolio to our talent pool.
                         </p>
 
@@ -77,8 +77,8 @@ const Careers = () => {
                             Apply for a Position
                         </motion.a>
 
-                        <div className="mt-12 pt-12 border-t border-white/10 text-center">
-                            <p className="text-[0.6rem] font-black text-white/20 uppercase tracking-[0.4em] leading-relaxed">
+                        <div className="mt-12 pt-12 border-t border-primary/10 text-center">
+                            <p className="text-[0.6rem] font-black text-text-muted/40 uppercase tracking-[0.4em] leading-relaxed">
                                 Competitive Benefits • Growth Mindset • Professional Development
                             </p>
                         </div>

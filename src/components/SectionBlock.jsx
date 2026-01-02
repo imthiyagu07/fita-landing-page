@@ -11,10 +11,10 @@ const SectionBlock = ({
     icon = "🏗️"
 }) => {
     return (
-        <section id={id} className={`py-32 sm:py-48 px-6 sm:px-12 lg:px-16 relative overflow-hidden ${bgGray ? 'bg-neutral-950' : 'bg-black'} border-b border-white/5`}>
+        <section id={id} className={`py-32 sm:py-48 px-6 sm:px-12 lg:px-16 relative overflow-hidden ${bgGray ? 'bg-surface' : 'bg-background'} border-b border-primary/5`}>
             {/* Tech Grid Background */}
             <div className="absolute inset-0 opacity-5"
-                style={{ backgroundImage: `radial-gradient(circle at 2px 2px, rgba(148,163,184,0.15) 1px, transparent 0)`, backgroundSize: '60px 60px' }}></div>
+                style={{ backgroundImage: `radial-gradient(circle at 2px 2px, rgba(30,27,75,0.1) 1px, transparent 0)`, backgroundSize: '60px 60px' }}></div>
 
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-24 xl:gap-32 relative z-10">
                 <motion.div
@@ -37,11 +37,11 @@ const SectionBlock = ({
                         </span>
                     </div>
 
-                    <h2 className="font-heading font-black text-3xl sm:text-5xl lg:text-6xl text-white mb-8 tracking-tight leading-[1.1] sm:leading-[0.9] uppercase">
+                    <h2 className="font-heading font-black text-3xl sm:text-5xl lg:text-6xl text-text-main mb-8 tracking-tight leading-[1.1] sm:leading-[0.9] uppercase">
                         {title}
                     </h2>
 
-                    <p className="font-body text-base sm:text-lg text-white/40 mb-10 leading-relaxed max-w-xl">
+                    <p className="font-body text-base sm:text-lg text-text-muted mb-10 leading-relaxed max-w-xl">
                         {description}
                     </p>
 
@@ -57,7 +57,7 @@ const SectionBlock = ({
                                     className="flex items-start gap-6 group cursor-default"
                                 >
                                     <div className="mt-2.5 w-2.5 h-px bg-primary/60 group-hover:w-5 group-hover:bg-primary transition-all duration-500"></div>
-                                    <span className="font-body text-white/60 text-[0.85rem] sm:text-[0.9rem] tracking-wide leading-relaxed group-hover:text-white transition-colors duration-500">{item}</span>
+                                    <span className="font-body text-text-muted text-[0.85rem] sm:text-[0.9rem] tracking-wide leading-relaxed group-hover:text-primary transition-colors duration-500">{item}</span>
                                 </motion.li>
                             ))}
                         </ul>
@@ -84,11 +84,11 @@ const SectionBlock = ({
                         {/* Glow effect */}
                         <div className="absolute inset-0 bg-primary/5 rounded-full blur-[80px] group-hover:bg-primary/10 transition-colors duration-1000"></div>
 
-                        <div className="relative h-full w-full bg-white/3 border border-white/10 rounded-[3rem] sm:rounded-[4rem] backdrop-blur-3xl flex items-center justify-center overflow-hidden group-hover:border-white/20 transition-colors duration-700">
+                        <div className="relative h-full w-full bg-primary/5 border border-primary/10 rounded-[3rem] sm:rounded-[4rem] backdrop-blur-3xl flex items-center justify-center overflow-hidden group-hover:border-primary/20 transition-colors duration-700">
                             <motion.div
                                 animate={{ y: [0, -20, 0] }}
                                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                                className="text-[8rem] sm:text-[12rem] lg:text-[14rem] filter grayscale opacity-20 group-hover:grayscale-0 group-hover:opacity-40 transition-all duration-1000 transform group-hover:scale-110"
+                                className="text-[8rem] sm:text-[12rem] lg:text-[14rem] filter grayscale opacity-10 group-hover:grayscale-0 group-hover:opacity-30 transition-all duration-1000 transform group-hover:scale-110"
                             >
                                 {icon}
                             </motion.div>
