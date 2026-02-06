@@ -113,7 +113,6 @@ const Hero = () => {
                     FITA Group integrates advanced design, precision engineering,
                     and elite construction to redefine Singapore&apos;s most complex
                     built environments.
-                    <div class="poper-56"></div>
                 </motion.p>
 
                 {/* CTAs */}
