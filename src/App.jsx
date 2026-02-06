@@ -79,7 +79,6 @@ function App() {
 
                 {/* 6. CAREERS PAGE */}
                 <Careers />
-                <div class="poper-55"></div>
             </main>
 
             <Footer />
